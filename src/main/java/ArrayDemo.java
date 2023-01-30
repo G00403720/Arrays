@@ -1,3 +1,7 @@
+import java.io.InputStream;
+import java.util.Scanner;
+import java.util.InputMismatchException;
+
 public class ArrayDemo {
     public static void main(String[] args) {
         int[] array;
@@ -12,6 +16,7 @@ public class ArrayDemo {
         array[7] = 800;
         array[8] = 900;
         array[9] = 1000;
+        array[10] = 1100;
 
         System.out.println("Element at index 0: " +array[0]);
         System.out.println("Element at index 1: " +array[1]);
@@ -24,5 +29,17 @@ public class ArrayDemo {
         System.out.println("Element at index 8: " +array[8]);
         System.out.println("Element at index 9: " +array[9]);
 
+
+        int myScan = new int;
+
+        try
+        {
+           System.out.println("Enter a number: ");
+           array[10] = myScan;
+        }
+        catch(ArrayIndexOutOfBoundsException aiob)
+        {
+            System.out.println("array does not exist");
+        }
     }
 }
